@@ -10,10 +10,9 @@ The dataset I used to train my model was Kaggle's **News Headlines Dataset For S
 
 ### Model Development & Training
 To train the model, I decided to take the finetuning approach. In the past, I had worked with BERT, which was a very popular model for its ability to provide accurate results and require minimal data to do so for specific NLP tasks. Instead of BERT, however, I decided to try finetuning the pre-trained XLNet model for sarcasm detection. According to other researchers, XLNet performed better than BERT in multiple categories, so with my goal of optimizing accuracy, it was a good option. 
-The optimizer used was AdamW with a batch size of 32, weight decay rate of 0.01, and learning rate of 2e^-5, and 4 epochs were used for training. The training process took over an hour, but the model performed extremely well. <br>
+The optimizer used was AdamW with a batch size of 32, weight decay rate of 0.01, and learning rate of 2e<sup>-5</sup>, and 4 epochs were used for training. The training process took over an hour, checking a validation set at each epoch, but the model performed extremely well. <br>
 <br>
-**Test Accuracy: ** <br>
-**Train Accuracy: **
+**Validation Accuracy: 0.9259** <br>
 
 ### Discussion
 Overall, I believe that the model was successful. The data set was suited well for the task, providing a large amount of data to train the model and an even distribution over the classification bins. Using the advantages of finetuning pretrained NLP models, I was able to achieve a high accuracy score for a RNN that detects sarcasm in headlines. Amongst other approaches, I believe deep learning was the best approach to a sarcasm detection task, as sarcasm relies heavily on context. Given that the RNN has the ability to use self-attention and optimizers like AdamW, it reads context much better than classical ML methods would, making it optimal for this task. <br>
